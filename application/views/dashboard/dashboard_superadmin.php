@@ -172,7 +172,7 @@
             <!-- AREA CHART -->
             <div class="card card-success">
               <div class="card-header">
-                <h3 class="card-title">List Admi Sekolah</h3>
+                <h3 class="card-title">List Admin Sekolah</h3>
                 
               </div>
                 <div class="card-body table-responsive p-0">
