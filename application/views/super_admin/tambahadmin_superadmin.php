@@ -157,6 +157,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
+    <!-- Main content -->
     <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -165,7 +166,7 @@
             <!-- general form elements -->
             <div class="card card-lightblue">
               <div class="card-header">
-                <h3 class="card-title">Pendaftaran Admin</h3>
+                <h3 class="card-title">Pendaftaran Admin Baru</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -197,6 +198,267 @@
                     <input type="password" class="form-control" name="passconf" placeholder="Masukkan Password Kembali">
                     <?=form_error('passconf')?>
                   </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>NUPTK *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Jenis Kelamin *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('tempatlahir') ? 'has-error' : null?>">
+                    <label>Tempat lahir *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Tanggal Lahir *</label>
+                    <input type="date" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>NIP *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Status Pegawai *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Jenis PTK *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Agama *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Alamat *</label>
+                    <textarea class="form-control" rows="3" id="textarea" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK"></textarea>
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>RT *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>RW *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Dusun *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Desa *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Kecamatan *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Kode POS *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>No Telp *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>No Handphone *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Tugas Tambahan *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>SK CPNS *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Tanggal SK CPNS *</label>
+                    <input type="date" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>SK Pangkat *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Tanggal Mulai Tugas (TMT) pangkat golongan *</label>
+                    <input type="date" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Lembaga *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Pangkat *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Sumber gaji *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Nama Ibu *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Status Kawin *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Nama Suami/Istri *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Pekerjaan Suami/Istri *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Tanggal Mulai Tugas (TMT) PNS *</label>
+                    <input type="date" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Lisensi Kepala Sekolah *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Diklat Pegawai *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Keahlian Braille *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Bahasa Isyarat *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>NPWP *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Nama Pajak *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Warga Negara *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Nama Bank *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>No Rekening Bank *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Nama Rekening *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>NIK *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Nomor KK *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Karis Karsu *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Lintang *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Bujur *</label>
+                    <input type="number" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>Nuks *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary">Ajukan Pendaftaran</button>
                     <button type="reset" class="btn btn-default">Reset</button>
