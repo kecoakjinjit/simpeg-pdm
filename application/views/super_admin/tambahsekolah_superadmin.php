@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Super Admin | Daftar Sekolah</title>
+  <title>Super Admin | Tambah Sekolah</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -142,12 +142,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Daftar Sekolah</h1>
+            <h1 class="m-0">Tambah Data Sekolah</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">Daftar Sekolah</li>
+              <li class="breadcrumb-item active">Tambah Sekolah</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -157,88 +158,95 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        
-        <!-- /.row -->
-
-        <!-- GRAFIK -->
-
-        <!-- Main row -->
+    <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
-            <!-- AREA CHART -->
-            <div class="card card-secondary">
+          <div class="col-12">
+            
+            <!-- general form elements -->
+            <div class="card card-lightblue">
               <div class="card-header">
-                <h3 class="card-title">List Sekolah</h3>
-                <div class="card-tools">
-                  <ul class="nav nav-pills ml-auto">
-                    <li class="nav-item">
-                    <a href="<?= site_url('users/tambahsekolah')?>"><input type="button" class="btn btn-block btn-default btn-sm" value="Tambah Sekolah"></a>
-                    </li>
-                  </ul>
-                </div>
-                
-            </div>
-                <div class="card-body table-responsive p-0">
-                    <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                        <th style="width: 10px">No</th>
-                        <th style=>Nama Sekolah</th>
-                        <th style=>NPSN</th>
-                        <th style=>Alamat</th>
-                        <th style=>Jumlah Siswa</th>
-                        <th style=>Kepala Sekolah</th>
-                        <th style=>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php $no = 1;
-                  foreach ($daftarsekolah as $d) { ?>
-                    <tr>
-                    <td><?=$no++?>.</td>
-                    <td><?=$d['nama']?></td>
-                    <td><?=$d['npsn']?></td>
-                    <td><?=$d['alamat']?></td>
-                    <td><?=$d['jumlah_siswa']?></td>
-                    <td><?=$d['kepsek']?></td>
-                    <td class="text-center"> 
-                      <form action="<?=site_url('users/del_sekolah')?>" method="POST">
-                      <button class="btn btn-primary btn-sm"><i class="fa fa-pen"></i> Update
-                      </button>  
-                      <input type="hidden" name="id_sekolah" value="<?=$d['id_sekolah']?>">
-                      <button onclick="return confirm ('Apakah Anda yakin?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Hapus
-                      </button>
-                      </form>
-                    </td>
-                  </tr>
-                  <?php  
-                  }  
-                  ?>   
-                    </tbody>
-                    </table>
+                <h3 class="card-title">Pendaftaran Sekolah</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+                <div class="card-body">
+                <?php // echo validation_errors() ?>
+                <form action="" method="post">
+                  <div class="form-group <?=form_error('fullname') ? 'has-error' : null?>">
+                    <label>Nama Sekolah *</label>
+                    <input type="text" class="form-control" name="fullname" value="<?=set_value('fullname')?>" placeholder="Masukkan Nama Sekolah">
+                    <?=form_error('fullname')?>
+                  </div>
+                  <div class="form-group <?=form_error('alamatsekolah') ? 'has-error' : null?>">
+                    <label>Alamat Sekolah *</label>
+                    <input type="text" class="form-control" name="alamatsekolah" value="<?=set_value('alamatsekolah')?>" placeholder="Masukkan Alamat Sekolah">
+                    <?=form_error('alamatsekolah')?>
+                  </div>
+                  <div class="form-group <?=form_error('statussekolah') ? 'has-error' : null?>">
+                    <label>Status *</label>
+                    <input type="text" class="form-control" name="statussekolah" value="<?=set_value('statussekolah')?>" placeholder="Masukkan status sekolah">
+                    <?=form_error('statussekolah')?>
+                  </div>
+                  <div class="form-group <?=form_error('jumlahsiswa') ? 'has-error' : null?>">
+                    <label>Jumlah Siswa *</label>
+                    <input type="number" class="form-control" name="jumlahsiswa" value="<?=set_value('jumlahsiswa')?>" placeholder="Masukkan jumlah siswa">
+                    <?=form_error('jumlah siswa')?>
+                  </div>
+                  <div class="form-group <?=form_error('kepalasekolah') ? 'has-error' : null?>">
+                    <label>Kepala Sekolah *</label>
+                    <input type="text" class="form-control" name="kepalasekolah" value="<?=set_value('kepalasekolah')?>" placeholder="Masukkan nama Kepala Sekolah">
+                    <?=form_error('kepala sekolah')?>
+                  </div>
+                  <div class="form-group <?=form_error('Operator sekolah') ? 'has-error' : null?>">
+                    <label>Operator Sekolah *</label>
+                    <input type="text" class="form-control" name="operatorsekolah" value="<?=set_value('operatorsekolah')?>" placeholder="Masukkan nama operator sekolah">
+                    <?=form_error('operatorsekolah')?>
+                  </div>
+                  <div class="form-group <?=form_error('kurikulum') ? 'has-error' : null?>">
+                    <label>Kurikulum *</label>
+                    <input type="text" class="form-control" name="kurikulum" value="<?=set_value('kurikulum')?>" placeholder="Masukkan jenis kurikulum">
+                    <?=form_error('kurikulum')?>
+                  </div>
+                  <div class="form-group <?=form_error('statuskepemilikan') ? 'has-error' : null?>">
+                    <label>Status Kepemilikan *</label>
+                    <input type="text" class="form-control" name="statuskepemilikan" value="<?=set_value('statuskepemilikan')?>" placeholder="Masukkan status kepemilikan">
+                    <?=form_error('statuskepemilikan')?>
+                  </div>
+                  <div class="form-group <?=form_error('skpendirian') ? 'has-error' : null?>">
+                    <label>SK Pendirian *</label>
+                    <input type="text" class="form-control" name="skpendirian" value="<?=set_value('skpendirian')?>" placeholder="Masukkan SK pendirian">
+                    <?=form_error('skpendirian')?>
+                  </div>
+                  <div class="form-group <?=form_error('tglskpendirian') ? 'has-error' : null?>">
+                    <label>Tanggal SK Pendirian *</label>
+                    <input type="date" class="form-control" name="tglskpendirian" value="<?=set_value('tglskpendirian')?>" placeholder="Masukkan tanggal SK pendirian">
+                    <?=form_error('tglskpendirian')?>
+                  </div>
+                  <div class="form-group <?=form_error('skoperasional') ? 'has-error' : null?>">
+                    <label>SK izin Operasional *</label>
+                    <input type="text" class="form-control" name="skoperasional" value="<?=set_value('skoperasional')?>" placeholder="Masukkan SK operasional">
+                    <?=form_error('skoperasional')?>
+                  </div>
+                  <div class="form-group <?=form_error('tglskoperasional') ? 'has-error' : null?>">
+                    <label>Tanggal SK izin Operasional *</label>
+                    <input type="date" class="form-control" name="tglskoperasional" value="<?=set_value('tgloperasional')?>" placeholder="Masukkan tanggal operasional">
+                    <?=form_error('tglskoperasional')?>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Ajukan Pendaftaran</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                  </div>
+                  </form>
                 </div>
                 <!-- /.card-body -->
-                <div class="card-footer clearfix">
-                    <ul class="pagination pagination-sm m-0 float-right">
-                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                    </ul>
-                </div>
-                </div>
-            <!-- /.card -->
-            
-                
             </div>
-          <!-- /.col (LEFT) -->
-          
-         
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
         </div>
         <!-- /.row -->
-      </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>

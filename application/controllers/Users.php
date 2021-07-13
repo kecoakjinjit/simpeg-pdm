@@ -34,6 +34,18 @@ class Users extends CI_Controller {
         $this->load->view('profile/editprofile_adminsekolah');
     }
 
+    public function tambahadmin()
+    {
+        check_not_login();
+        $this->load->view('super_admin/tambahadmin_superadmin');
+    }
+
+    public function tambahsekolah()
+    {
+        check_not_login();
+        $this->load->view('super_admin/tambahsekolah_superadmin');
+    }
+
     public function usergtk()
 	{
         check_not_login();
@@ -134,6 +146,8 @@ class Users extends CI_Controller {
         }
         echo "<script>window.location='".site_url('users/daftarsekolah')."';</script>";
     }
+
+    
 
     /*public function update($id)
     {

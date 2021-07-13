@@ -173,7 +173,13 @@
             <div class="card card-success">
               <div class="card-header">
                 <h3 class="card-title">List Admin Sekolah</h3>
-
+                <div class="card-tools">
+                  <ul class="nav nav-pills ml-auto">
+                    <li class="nav-item">
+                    <a href="<?= site_url('users/tambahadmin')?>"><input type="button" class="btn btn-block btn-default btn-sm" value="Tambah Admin"></a>
+                    </li>
+                  </ul>
+                </div>
                 
             </div>
                 <div class="card-body table-responsive p-0">
