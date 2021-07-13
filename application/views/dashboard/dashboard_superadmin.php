@@ -173,8 +173,9 @@
             <div class="card card-success">
               <div class="card-header">
                 <h3 class="card-title">List Admin Sekolah</h3>
+
                 
-              </div>
+            </div>
                 <div class="card-body table-responsive p-0">
                     <table class="table table-bordered">
                         <tr>
@@ -223,7 +224,6 @@
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
                     </ul>
-                 
                 </div>
                 </div>
             <!-- /.card -->
