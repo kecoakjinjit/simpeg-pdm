@@ -199,6 +199,18 @@
                     <input type="password" class="form-control" name="passconf" placeholder="Masukkan Password Kembali">
                     <?=form_error('passconf')?>
                   </div>
+                  <div class="form-group <?=form_error('nuptk') ? 'has-error' : null?>">
+                    <label>NUPTK *</label>
+                    <input type="text" class="form-control" name="nuptk" value="<?=set_value('nuptk')?>" placeholder="Masukkan NUPTK">
+                    <?=form_error('nuptk')?>
+                  </div>
+                  <div class="form-group <?=form_error('jeniskelamin') ? 'has-error' : null?>">
+                    <label>Jenis Kelamin *</label>
+                    <select class="form-control" name="jeniskelamin" id="category" required>
+                        <option value="">No Selected</option>
+                    </select>
+                    <?=form_error('jeniskelamin')?>
+                  </div>
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary">Ajukan Pendaftaran</button>
                     <button type="reset" class="btn btn-default">Reset</button>
